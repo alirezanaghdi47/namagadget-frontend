@@ -37,7 +37,7 @@ type TSize = 'sm' | 'md' | 'lg' | undefined;
 type TVariant = 'flat' | 'solid' | 'bordered' | 'light' | 'faded' | 'shadow' | 'ghost' | undefined;
 
 interface IButtonProps {
-  as?: any;
+  as?: unknown;
   href?: string;
   children: ReactNode;
   color: TColor;

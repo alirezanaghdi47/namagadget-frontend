@@ -3,8 +3,8 @@
 // libraries
 import Image from 'next/image';
 import Link from 'next/link';
-import { useDisclosure, User } from '@nextui-org/react';
-import { LuFileText, LuInfo, LuList, LuLogOut, LuMoon, LuPlus, LuSun, LuUser, LuUserRound } from 'react-icons/lu';
+import { useDisclosure } from '@nextui-org/react';
+import { LuFileText, LuList, LuPlus, LuUser } from 'react-icons/lu';
 
 // components
 import { Button } from '@/components/Button';
