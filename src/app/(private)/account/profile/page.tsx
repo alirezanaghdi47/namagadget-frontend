@@ -1,5 +1,5 @@
 const ProfilePage = () => {
-  return <>profile</>;
+  return <main className="w-full"></main>;
 };
 
 export default ProfilePage;

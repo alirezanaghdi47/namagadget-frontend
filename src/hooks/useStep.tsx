@@ -1,5 +1,5 @@
 // libraries
-import { useState } from "react";
+import { useState } from 'react';
 
 const useStep = <T,>(initialData: T | null = null, activeStep: number = 1) => {
   const [step, setStep] = useState<T | null>(initialData);

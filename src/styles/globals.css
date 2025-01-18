@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .dir-ltr {
+    direction: ltr !important;
+  }
+}
+
+*::-webkit-scrollbar {
+  @apply h-2 w-2;
+}
+
+/**::-webkit-scrollbar-track {*/
+/*}*/
+
+*::-webkit-scrollbar-thumb {
+  @apply rounded-lg bg-secondary/20;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  @apply bg-secondary/40;
+}

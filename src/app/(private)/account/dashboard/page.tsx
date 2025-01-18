@@ -1,5 +1,5 @@
 const DashboardPage = () => {
-  return <>dashboard</>;
+  return <>favorites</>;
 };
 
 export default DashboardPage;

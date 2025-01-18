@@ -1,5 +1,5 @@
-const FavoriteAdvertisesPage = () => {
-  return <>favorite advertises</>;
+const FavoritesPage = () => {
+  return <>favorites</>;
 };
 
-export default FavoriteAdvertisesPage;
+export default FavoritesPage;

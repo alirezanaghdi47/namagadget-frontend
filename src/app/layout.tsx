@@ -1,9 +1,10 @@
 // libraries
+import { ReactNode } from 'react';
 import type { Metadata } from 'next';
-import { getSession } from '@/utils/auth';
+import { getSession } from '@/lib/auth';
 
 // helpers
-import { vazirmatn } from '@/utils/fonts';
+import { vazirmatn } from '@/lib/fonts';
 
 // providers
 import AuthProvider from '@/providers/AuthProvider';
@@ -17,18 +18,12 @@ export const metadata: Metadata = {
   description: 'مرجع فروش لوازم دسته دو',
 };
 
-const RootLayout = async ({
-  children,
-}: {
-  children: React.ReactNode;
-  modal: React.ReactNode;
-  params: { locale: string };
-}) => {
+const RootLayout = async ({ children }: { children: ReactNode }) => {
   const session = await getSession();
 
   return (
-    <html lang="fa" dir="rtl" className="" suppressHydrationWarning>
-      <body className={vazirmatn.className}>
+    <html lang="fa" dir="rtl" suppressHydrationWarning>
+      <body className={`${vazirmatn.className}`}>
         <AuthProvider session={session}>
           <ThemeProvider>{children}</ThemeProvider>
         </AuthProvider>
