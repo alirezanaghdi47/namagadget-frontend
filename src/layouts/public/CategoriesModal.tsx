@@ -40,7 +40,7 @@ const CategoriesModal = ({ isOpen, onOpenChange }) => {
             <ModalHeader className="flex items-center justify-between">
               <div className="flex items-center justify-start gap-2">
                 {category && (
-                  <Button color="secondary" size="md" variant="light" isIcon onClick={() => setCategory('')}>
+                  <Button color="secondary" size="md" variant="light" isIconOnly onPress={() => setCategory('')}>
                     <LuChevronRight size={20} />
                   </Button>
                 )}
@@ -52,7 +52,7 @@ const CategoriesModal = ({ isOpen, onOpenChange }) => {
                 </h3>
               </div>
 
-              <Button color="danger" size="md" variant="light" isIcon onClick={onClose}>
+              <Button color="danger" size="md" variant="light" isIconOnly onPress={onClose}>
                 <LuX size={20} />
               </Button>
             </ModalHeader>

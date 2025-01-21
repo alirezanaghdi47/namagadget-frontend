@@ -43,7 +43,7 @@ const CitiesModal = ({ isOpen, onOpenChange }) => {
             <ModalHeader className="flex items-center justify-between">
               <h3 className="text-dark text-base">لیست شهر ها</h3>
 
-              <Button color="danger" size="md" variant="light" isIcon onClick={onClose}>
+              <Button color="danger" size="md" variant="light" isIconOnly onPress={onClose}>
                 <LuX size={20} />
               </Button>
             </ModalHeader>

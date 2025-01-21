@@ -6,7 +6,6 @@ import { User } from '@nextui-org/react';
 import { LuInfo, LuLogOut, LuMoon, LuSun } from 'react-icons/lu';
 
 // libraries
-import { Switch } from '@/components/Switch';
 import { Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from '@/components/Dropdown';
 
 const AccountDropdown = ({ trigger }) => {
@@ -16,7 +15,7 @@ const AccountDropdown = ({ trigger }) => {
     <Dropdown>
       <DropdownTrigger>{trigger}</DropdownTrigger>
       <DropdownMenu>
-        <DropdownItem key="user" isReadOnly className="cursor-default">
+        <DropdownItem key="user" variant="light" isReadOnly className="cursor-default">
           <User
             avatarProps={{
               size: 'sm',
@@ -31,24 +30,20 @@ const AccountDropdown = ({ trigger }) => {
         <DropdownItem
           key="profile"
           variant="flat"
-          color="default"
+          color="secondary"
           startContent={<LuInfo size={20} />}
           href="/account/profile"
         >
           اطلاعات من
         </DropdownItem>
-        <DropdownItem key="theme" isReadOnly className="cursor-default">
-          <Switch
-            color="primary"
-            size="sm"
-            isSelected={theme === 'dark'}
-            onValueChange={() => setTheme((prevState) => (prevState === 'dark' ? 'light' : 'dark'))}
-            thumbIcon={({ isSelected, className }) =>
-              isSelected ? <LuSun size={20} className={className} /> : <LuMoon size={20} className={className} />
-            }
-          >
-            حالت شب
-          </Switch>
+        <DropdownItem
+          key="theme"
+          variant="flat"
+          color="secondary"
+          startContent={theme === 'dark' ? <LuSun size={20} /> : <LuMoon size={20} />}
+          onPress={() => setTheme((prevState) => (prevState === 'dark' ? 'light' : 'dark'))}
+        >
+          {theme === 'dark' ? 'حالت روز' : 'حالت شب'}
         </DropdownItem>
         <DropdownItem key="exit" variant="flat" color="danger" startContent={<LuLogOut size={20} />}>
           خروج
