@@ -4,21 +4,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useDisclosure } from '@nextui-org/react';
-import { LuFileText, LuList, LuPlus, LuUser } from 'react-icons/lu';
+import { LuFileText, LuMapPin, LuPlus, LuUser } from 'react-icons/lu';
 
 // components
 import { Button } from '@/components/Button';
 
 // layouts
-import CategoriesModal from '@/layouts/public/CategoriesModal';
 import AccountDropdown from '@/layouts/AccountDropdown';
+import CitiesModal from '@/layouts/public/CitiesModal';
 
 const BottomNavigation = () => {
-  const {
-    isOpen: isOpenCategoryModal,
-    onOpen: onOpenCategoryModal,
-    onOpenChange: onOpenChangeCategoryModal,
-  } = useDisclosure();
+  const { isOpen: isOpenCityModal, onOpen: onOpenCityModal, onOpenChange: onOpenChangeCityModal } = useDisclosure();
 
   return (
     <nav className="fixed bottom-0 left-0 flex h-[80px] w-full items-center justify-center gap-4 border-t border-t-secondary/10 bg-default lg:hidden">
@@ -42,16 +38,14 @@ const BottomNavigation = () => {
             size="sm"
             color="secondary"
             variant="light"
-            startContent={<LuList size={20} />}
-            onPress={onOpenCategoryModal}
+            startContent={<LuMapPin size={20} />}
+            onPress={onOpenCityModal}
             className="h-max flex-col p-2"
           >
-            دسته ها
+            تهران
           </Button>
 
-          {isOpenCategoryModal && (
-            <CategoriesModal isOpen={isOpenCategoryModal} onOpenChange={onOpenChangeCategoryModal} />
-          )}
+          {isOpenCityModal && <CitiesModal isOpen={isOpenCityModal} onOpenChange={onOpenChangeCityModal} />}
         </div>
 
         <div className="absolute bottom-14 left-1/2 right-1/2 z-10 flex items-center justify-center">

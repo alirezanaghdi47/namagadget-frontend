@@ -1,3 +1,5 @@
+'use client';
+
 // libraries
 import { useState } from 'react';
 import { useMediaQuery } from 'usehooks-ts';
@@ -5,7 +7,6 @@ import { LuSearch, LuX } from 'react-icons/lu';
 
 // components
 import { Modal, ModalContent, ModalHeader, ModalBody } from '@/components/Modal';
-import { Listbox, ListboxItem } from '@/components/List';
 import { Button } from '@/components/Button';
 import { TextInput } from '@/components/TextInput';
 
@@ -60,33 +61,20 @@ const CitiesModal = ({ isOpen, onOpenChange }) => {
                 />
               </div>
 
-              <div className="h-full w-full" id="virtualize-city-list">
-                <Listbox
-                  isVirtualized
-                  variant="flat"
-                  color="primary"
-                  className="w-full"
-                  classNames={{
-                    base: 'p-0',
-                  }}
-                  virtualization={{
-                    maxListboxHeight: isDesktop
-                      ? 300
-                      : document.getElementById('virtualize-city-list')?.clientHeight || 200,
-                    itemHeight: 40,
-                  }}
-                  selectionMode="single"
-                  selectedKeys={city}
-                  onSelectionChange={setCity}
-                  hideSelectedIcon
-                >
-                  {cities.map((city) => (
-                    <ListboxItem key={city.id} value={city.value}>
-                      {city.title}
-                    </ListboxItem>
-                  ))}
-                </Listbox>
-              </div>
+              <ul className="flex h-[calc(100dvh_-_140px)] w-full flex-col items-start justify-start gap-2 overflow-y-auto pe-2 lg:max-h-[280px]">
+                {cities.map((item) => (
+                  <li key={item.id} className="w-full">
+                    <Button
+                      color="secondary"
+                      variant="light"
+                      className="w-full justify-start"
+                      onPress={() => setCity(item.value)}
+                    >
+                      {item.title}
+                    </Button>
+                  </li>
+                ))}
+              </ul>
             </ModalBody>
           </>
         )}
