@@ -2,7 +2,7 @@
 
 // libraries
 import { useMediaQuery } from 'usehooks-ts';
-import { LuCar, LuChevronDown, LuChevronUp, LuHouse, LuMonitor, LuSofa, LuX } from 'react-icons/lu';
+import { LuCar, LuCheck, LuChevronDown, LuChevronUp, LuHouse, LuMonitor, LuSofa, LuTrash2, LuX } from 'react-icons/lu';
 
 // components
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter } from '@/components/Modal';
@@ -45,11 +45,19 @@ const FilterModal = ({ isOpen, onOpenChange }) => {
         {(onClose) => (
           <>
             <ModalHeader className="flex items-center justify-between">
-              <div className="flex items-center justify-start gap-2">
+              <div className="flex items-center justify-start gap-4">
                 <h3 className="text-dark text-base">فیلتر ها</h3>
 
-                {(filters.categories.length > 0 || !filters.hasImage) && (
-                  <Button color="danger" size="sm" variant="flat" onPress={resetFilters}>
+                {(filters.categories.length > 0 ||
+                  !filters.hasImage ||
+                  ![10000000, 50000000].every((price) => filters.prices.includes(price))) && (
+                  <Button
+                    color="danger"
+                    size="sm"
+                    variant="flat"
+                    onPress={resetFilters}
+                    startContent={<LuTrash2 size={16} />}
+                  >
                     حذف فیلتر ها
                   </Button>
                 )}
@@ -67,6 +75,7 @@ const FilterModal = ({ isOpen, onOpenChange }) => {
                     key="categories"
                     title="دسته بندی ها"
                     indicator={({ isOpen }) => (isOpen ? <LuChevronUp size={20} /> : <LuChevronDown size={20} />)}
+                    classNames={{ title: 'text-secondary text-sm' }}
                   >
                     <ul className="grid w-full grid-cols-12 items-start justify-start gap-x-2 gap-y-4">
                       {categories.map((category) => (
@@ -90,7 +99,10 @@ const FilterModal = ({ isOpen, onOpenChange }) => {
                     key="price"
                     title="قیمت"
                     indicator={({ isOpen }) => (isOpen ? <LuChevronUp size={20} /> : <LuChevronDown size={20} />)}
-                    classNames={{ content: 'flex flex-col justify-start items-start gap-4 w-full pb-4' }}
+                    classNames={{
+                      content: 'flex flex-col justify-start items-start gap-4 w-full pb-4',
+                      title: 'text-secondary text-sm',
+                    }}
                   >
                     <div className="dir-ltr flex w-full flex-col items-start justify-start gap-4">
                       <SliderInput
@@ -115,6 +127,7 @@ const FilterModal = ({ isOpen, onOpenChange }) => {
                     key="status"
                     title="وضعیت"
                     indicator={({ isOpen }) => (isOpen ? <LuChevronUp size={20} /> : <LuChevronDown size={20} />)}
+                    classNames={{ title: 'text-secondary text-sm' }}
                   >
                     <SwitchBox
                       size="sm"
@@ -130,11 +143,17 @@ const FilterModal = ({ isOpen, onOpenChange }) => {
             </ModalBody>
 
             <ModalFooter>
-              <Button color="danger" size="md" variant="light">
+              <Button color="danger" size="md" variant="light" onPress={onOpenChange} startContent={<LuX size={16} />}>
                 انصراف
               </Button>
 
-              <Button color="primary" size="md" variant="solid">
+              <Button
+                color="primary"
+                size="md"
+                variant="solid"
+                onPress={onOpenChange}
+                startContent={<LuCheck size={16} />}
+              >
                 ثبت
               </Button>
             </ModalFooter>

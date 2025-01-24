@@ -13,24 +13,15 @@ import { TextInput } from '@/components/TextInput';
 const CitiesModal = ({ isOpen, onOpenChange }) => {
   const cities = [
     { id: 1, title: 'تهران', value: 'tehran' },
-    { id: 2, title: 'مشهد', value: 'tehran' },
-    { id: 3, title: 'اصفهان', value: 'tehran' },
-    { id: 4, title: 'کیش', value: 'tehran' },
-    { id: 5, title: 'قشم', value: 'tehran' },
-    { id: 6, title: 'تبریز', value: 'tehran' },
-    { id: 7, title: 'شمال', value: 'tehran' },
-    { id: 8, title: 'جنوب', value: 'tehran' },
-    { id: 9, title: 'اهواز', value: 'tehran' },
-    { id: 10, title: 'سمنان', value: 'tehran' },
-    { id: 11, title: 'سمنان', value: 'tehran' },
-    { id: 12, title: 'سمنان', value: 'tehran' },
-    { id: 13, title: 'سمنان', value: 'tehran' },
-    { id: 14, title: 'سمنان', value: 'tehran' },
-    { id: 15, title: 'سمنان', value: 'tehran' },
-    { id: 16, title: 'سمنان', value: 'tehran' },
-    { id: 17, title: 'سمنان', value: 'tehran' },
-    { id: 18, title: 'سمنان', value: 'tehran' },
-    { id: 19, title: 'سمنان', value: 'tehran' },
+    { id: 2, title: 'مشهد', value: 'mashhad' },
+    { id: 3, title: 'اصفهان', value: 'esfahan' },
+    { id: 4, title: 'کیش', value: 'kish' },
+    { id: 5, title: 'قشم', value: 'gheshm' },
+    { id: 6, title: 'تبریز', value: 'tabriz' },
+    { id: 7, title: 'شمال', value: 'north' },
+    { id: 8, title: 'جنوب', value: 'south' },
+    { id: 9, title: 'اهواز', value: 'ahvaz' },
+    { id: 10, title: 'سمنان', value: 'semnan' },
   ];
 
   const [city, setCity] = useState('');

@@ -20,24 +20,24 @@ const FilterBar = () => {
 
   return (
     <div className="flex w-full items-center justify-between gap-4">
+      <h1 className="flex gap-2 text-base font-bold text-secondary">
+        آگهی ها
+        <Chip variant="flat" color="primary" size="sm">
+          22
+        </Chip>
+      </h1>
+
       <Button
         color="secondary"
         size="md"
         variant="light"
-        endContent={<LuFilter size={16} />}
+        startContent={<LuFilter size={16} />}
         onPress={onOpenFilterModal}
       >
         فیلتر
       </Button>
 
       {isOpenFilterModal && <FilterModal isOpen={isOpenFilterModal} onOpenChange={onOpenChangeFilterModal} />}
-
-      <h1 className="text-base font-bold text-secondary">
-        <Chip variant="flat" color="primary" size="sm" className="me-2">
-          22
-        </Chip>
-        آگهی ها
-      </h1>
     </div>
   );
 };

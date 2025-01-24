@@ -18,7 +18,7 @@ const Header = () => {
   const { isOpen: isOpenCityModal, onOpen: onOpenCityModal, onOpenChange: onOpenChangeCityModal } = useDisclosure();
 
   return (
-    <header className="fixed left-0 top-0 hidden h-[80px] w-full items-center justify-center gap-4 border-b border-b-secondary/10 bg-default lg:flex">
+    <header className="fixed left-0 top-0 z-30 hidden h-[80px] w-full items-center justify-center gap-4 border-b border-b-secondary/10 bg-default lg:flex">
       <div className="grid w-full max-w-6xl grid-cols-12 p-4">
         <div className="col-span-9 flex items-center justify-start gap-2">
           <Link href="/" className="me-4">

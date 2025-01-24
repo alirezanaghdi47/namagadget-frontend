@@ -6,7 +6,7 @@ import Header from '@/layouts/auth/Header';
 
 const AuthLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="flex min-h-dvh w-full flex-col items-center justify-center p-4">
+    <div className="flex min-h-dvh w-full flex-col items-center justify-center p-8">
       <div className="flex w-full max-w-lg flex-col items-center justify-center gap-4">
         <Header />
 

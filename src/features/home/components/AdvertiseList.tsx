@@ -6,7 +6,7 @@
 import AdvertiseCard from '@/layouts/AdvertiseCard';
 
 const AdvertiseList = () => {
-  const advertises = Array(36).fill('');
+  const advertises = Array(24).fill('');
 
   return (
     <ul className="grid w-full grid-cols-12 items-start justify-start gap-4">

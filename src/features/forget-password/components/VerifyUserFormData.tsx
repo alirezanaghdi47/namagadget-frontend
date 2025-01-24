@@ -3,13 +3,13 @@
 // libraries
 import { useEffect } from 'react';
 import { useCountdown } from 'usehooks-ts';
-import { LuRefreshCcw } from 'react-icons/lu';
+import { LuArrowLeft, LuArrowRight, LuRefreshCcw } from 'react-icons/lu';
 
 // components
-import { TextInput } from '@/components/TextInput';
 import { Button } from '@/components/Button';
+import { NumberInput } from '@/components/NumberInput';
 
-const VerifyUserForm = ({ goToNextStep, goToPrevStep }) => {
+const VerifyUserFormData = ({ goToNextStep, goToPrevStep }) => {
   const [count, { startCountdown, resetCountdown }] = useCountdown({
     countStart: 5,
     intervalMs: 1000,
@@ -26,16 +26,14 @@ const VerifyUserForm = ({ goToNextStep, goToPrevStep }) => {
 
   return (
     <>
-      <TextInput
-        type="number"
+      <NumberInput
         name="code"
         label="کد اعتبارسنجی"
         placeholder=" "
         labelPlacement="outside"
         variant="flat"
         size="md"
-        className="w-full"
-        onKeyDown={(e) => ['e', 'E', '+', '-', '.'].includes(e.key) && e.preventDefault()}
+        isRequired
         endContent={
           count > 0 ? (
             <span className="text-nowrap text-sm text-secondary">{count} ثانیه </span>
@@ -48,11 +46,25 @@ const VerifyUserForm = ({ goToNextStep, goToPrevStep }) => {
       />
 
       <div className="mt-2 flex w-full items-center justify-center gap-4">
-        <Button color="danger" size="md" variant="light" className="w-1/2" onPress={goToPrevStep}>
+        <Button
+          color="danger"
+          size="md"
+          variant="light"
+          className="w-1/2"
+          onPress={goToPrevStep}
+          startContent={<LuArrowRight size={16} />}
+        >
           قبلی
         </Button>
 
-        <Button color="primary" size="md" variant="solid" className="w-1/2" onPress={goToNextStep}>
+        <Button
+          color="primary"
+          size="md"
+          variant="solid"
+          className="w-1/2"
+          onPress={goToNextStep}
+          endContent={<LuArrowLeft size={16} />}
+        >
           بعدی
         </Button>
       </div>
@@ -60,4 +72,4 @@ const VerifyUserForm = ({ goToNextStep, goToPrevStep }) => {
   );
 };
 
-export default VerifyUserForm;
+export default VerifyUserFormData;

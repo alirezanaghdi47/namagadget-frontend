@@ -17,7 +17,7 @@ const BottomNavigation = () => {
   const { isOpen: isOpenCityModal, onOpen: onOpenCityModal, onOpenChange: onOpenChangeCityModal } = useDisclosure();
 
   return (
-    <nav className="fixed bottom-0 left-0 flex h-[80px] w-full items-center justify-center gap-4 border-t border-t-secondary/10 bg-default lg:hidden">
+    <nav className="fixed bottom-0 left-0 z-30 flex h-[80px] w-full items-center justify-center gap-4 border-t border-t-secondary/10 bg-default lg:hidden">
       <div className="grid w-full max-w-2xl grid-cols-12 px-4 py-2">
         <div className="col-span-3 flex items-center justify-center">
           <Button
