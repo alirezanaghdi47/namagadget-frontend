@@ -40,7 +40,7 @@ const ImageInput = ({ label, name, isRequired, value, onChange }) => {
         <div
           {...getRootProps({
             className:
-              'dropzone flex justify-center items-center w-[120px] h-[120px] rounded-lg bg-default-100 hover:bg-default-200 transition cursor-pointer',
+              'dropzone flex justify-center items-center w-32 h-32 rounded-lg bg-default-100 hover:bg-default-200 transition cursor-pointer',
           })}
         >
           <input {...getInputProps()} />
@@ -70,7 +70,7 @@ const ImageInput = ({ label, name, isRequired, value, onChange }) => {
               onLoad={() => {
                 URL.revokeObjectURL(file.preview);
               }}
-              className="h-[120px] w-[120px] rounded-lg object-cover object-center"
+              className="h-32 w-32 rounded-lg object-cover object-center"
             />
           </div>
         ))}

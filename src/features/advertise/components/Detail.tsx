@@ -1,11 +1,36 @@
+'use client';
+
 // libraries
 import { LuBookmark, LuClock, LuList, LuMapPin, LuPhone, LuShare2 } from 'react-icons/lu';
 
 // components
 import { Button } from '@/components/Button';
-import { Tooltip } from '@/components/Tooltip';
 
 const Detail = () => {
+  const handleCallToVendor = () => {
+    window.open('tel:09195610753');
+  };
+
+  const handleShareAdvertise = () => {
+    if (navigator.share) {
+      navigator
+        .share({
+          title: 'Awesome Content',
+          text: 'Check out this awesome content!',
+          url: 'https://example.com',
+        })
+        .then(() => console.log('Shared successfully'))
+        .catch((error) => console.error('Sharing failed:', error));
+    } else {
+      navigator.clipboard
+        .writeText('https://example.com')
+        .then(() => console.log('Shared successfully'))
+        .catch((error) => console.error('Sharing failed:', error));
+    }
+  };
+
+  const handleAddToBookmark = () => {};
+
   return (
     <div className="flex w-full flex-col items-start justify-start gap-8">
       <h1 className="text-base font-bold leading-8 text-default-foreground">
@@ -19,48 +44,22 @@ const Detail = () => {
             size="md"
             variant="flat"
             startContent={<LuPhone size={16} />}
-            onPress={() => window.open('tel:09195610753')}
+            onPress={handleCallToVendor}
           >
             تماس با فروشنده
           </Button>
         </li>
 
         <li className="">
-          <Tooltip showArrow placement="bottom" content="اشتراک گذاری">
-            <Button
-              color="secondary"
-              size="md"
-              variant="light"
-              isIconOnly
-              onPress={() => {
-                if (navigator.share) {
-                  navigator
-                    .share({
-                      title: 'Awesome Content',
-                      text: 'Check out this awesome content!',
-                      url: 'https://example.com',
-                    })
-                    .then(() => console.log('Shared successfully'))
-                    .catch((error) => console.error('Sharing failed:', error));
-                } else {
-                  navigator.clipboard
-                    .writeText('https://example.com')
-                    .then(() => console.log('Shared successfully'))
-                    .catch((error) => console.error('Sharing failed:', error));
-                }
-              }}
-            >
-              <LuShare2 size={20} />
-            </Button>
-          </Tooltip>
+          <Button color="secondary" size="md" variant="light" isIconOnly onPress={handleShareAdvertise}>
+            <LuShare2 size={20} />
+          </Button>
         </li>
 
         <li className="">
-          <Tooltip showArrow placement="bottom" content="افزودن به علاقه مندی ها">
-            <Button color="secondary" size="md" variant="light" isIconOnly>
-              <LuBookmark size={20} />
-            </Button>
-          </Tooltip>
+          <Button color="secondary" size="md" variant="light" isIconOnly onPress={handleAddToBookmark}>
+            <LuBookmark size={20} />
+          </Button>
         </li>
       </ul>
 

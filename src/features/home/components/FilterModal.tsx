@@ -2,7 +2,7 @@
 
 // libraries
 import { useMediaQuery } from 'usehooks-ts';
-import { LuCar, LuCheck, LuChevronDown, LuChevronUp, LuHouse, LuMonitor, LuSofa, LuTrash2, LuX } from 'react-icons/lu';
+import { LuCar, LuChevronDown, LuChevronUp, LuFilter, LuHouse, LuMonitor, LuSofa, LuTrash2, LuX } from 'react-icons/lu';
 
 // components
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter } from '@/components/Modal';
@@ -152,9 +152,9 @@ const FilterModal = ({ isOpen, onOpenChange }) => {
                 size="md"
                 variant="solid"
                 onPress={onOpenChange}
-                startContent={<LuCheck size={16} />}
+                startContent={<LuFilter size={16} />}
               >
-                ثبت
+                فیلتر
               </Button>
             </ModalFooter>
           </>

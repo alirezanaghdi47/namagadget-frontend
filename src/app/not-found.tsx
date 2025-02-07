@@ -16,7 +16,7 @@ const RootNotFound = () => {
         alt="یافت نشد"
         width={200}
         height={200}
-        className="h-full w-[200px] lg:w-[300px]"
+        className="h-full w-64"
       />
 
       <h1 className="text-base font-bold text-secondary">صفحه مورد نظر یافت نشد</h1>

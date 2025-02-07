@@ -25,7 +25,7 @@ const VerifyUserFormData = ({ goToNextStep, goToPrevStep }) => {
   });
 
   return (
-    <>
+    <div className="flex w-full flex-col items-start justify-start gap-4">
       <NumberInput
         name="code"
         label="کد اعتبارسنجی"
@@ -68,7 +68,7 @@ const VerifyUserFormData = ({ goToNextStep, goToPrevStep }) => {
           بعدی
         </Button>
       </div>
-    </>
+    </div>
   );
 };
 

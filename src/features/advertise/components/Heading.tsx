@@ -1,7 +1,7 @@
 'use client';
 
-import { Breadcrumbs } from '@/components/Breadcrumbs';
-import { BreadcrumbItem } from '@nextui-org/react';
+// components
+import { Breadcrumbs, BreadcrumbItem } from '@/components/Breadcrumbs';
 
 const Heading = () => {
   return (
@@ -9,7 +9,7 @@ const Heading = () => {
       <Breadcrumbs>
         <BreadcrumbItem href="/">خانه</BreadcrumbItem>
         <BreadcrumbItem href="/?category=1">دسته بندی</BreadcrumbItem>
-        <BreadcrumbItem href="/adv">عنوان</BreadcrumbItem>
+        <BreadcrumbItem>عنوان</BreadcrumbItem>
       </Breadcrumbs>
     </div>
   );

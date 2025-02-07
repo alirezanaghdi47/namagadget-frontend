@@ -10,7 +10,7 @@ import { Button } from '@/components/Button';
 
 const ForgetPasswordFormData = ({ goToNextStep }) => {
   return (
-    <>
+    <div className="flex w-full flex-col items-start justify-start gap-4">
       <TextInput
         name="username"
         label="نام کاربری"
@@ -45,7 +45,7 @@ const ForgetPasswordFormData = ({ goToNextStep }) => {
           بعدی
         </Button>
       </div>
-    </>
+    </div>
   );
 };
 

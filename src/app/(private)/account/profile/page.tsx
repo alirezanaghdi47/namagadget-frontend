@@ -1,3 +1,5 @@
+'use client';
+
 // features
 import Heading from '@/features/profile/components/Heading';
 import Content from '@/features/profile/components/Content';

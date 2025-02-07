@@ -11,7 +11,7 @@ import { PasswordInput } from '@/components/PasswordInput';
 
 const LoginFormData = () => {
   return (
-    <>
+    <div className="flex w-full flex-col items-start justify-start gap-4">
       <TextInput
         name="username"
         label="نام کاربری"
@@ -61,7 +61,7 @@ const LoginFormData = () => {
           فراموشی رمز عبور
         </Button>
       </div>
-    </>
+    </div>
   );
 };
 

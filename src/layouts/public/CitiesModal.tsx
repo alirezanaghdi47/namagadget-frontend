@@ -9,23 +9,29 @@ import { LuSearch, LuX } from 'react-icons/lu';
 import { Modal, ModalContent, ModalHeader, ModalBody } from '@/components/Modal';
 import { Button } from '@/components/Button';
 import { TextInput } from '@/components/TextInput';
+import { List, ListItem } from '@/components/List';
 
 const CitiesModal = ({ isOpen, onOpenChange }) => {
-  const cities = [
-    { id: 1, title: 'تهران', value: 'tehran' },
-    { id: 2, title: 'مشهد', value: 'mashhad' },
-    { id: 3, title: 'اصفهان', value: 'esfahan' },
-    { id: 4, title: 'کیش', value: 'kish' },
-    { id: 5, title: 'قشم', value: 'gheshm' },
-    { id: 6, title: 'تبریز', value: 'tabriz' },
-    { id: 7, title: 'شمال', value: 'north' },
-    { id: 8, title: 'جنوب', value: 'south' },
-    { id: 9, title: 'اهواز', value: 'ahvaz' },
-    { id: 10, title: 'سمنان', value: 'semnan' },
-  ];
-
   const [city, setCity] = useState('');
   const isDesktop = useMediaQuery('(min-width: 992px)');
+
+  const handleSelectCity = (value) => {
+    setCity(value);
+    onOpenChange();
+  };
+
+  const cityList = [
+    { id: 1, label: 'تهران', value: 'tehran' },
+    { id: 2, label: 'مشهد', value: 'mashhad' },
+    { id: 3, label: 'اصفهان', value: 'esfahan' },
+    { id: 4, label: 'کیش', value: 'kish' },
+    { id: 5, label: 'قشم', value: 'gheshm' },
+    { id: 6, label: 'تبریز', value: 'tabriz' },
+    { id: 7, label: 'شمال', value: 'north' },
+    { id: 8, label: 'جنوب', value: 'south' },
+    { id: 9, label: 'اهواز', value: 'ahvaz' },
+    { id: 10, label: 'سمنان', value: 'semnan' },
+  ];
 
   return (
     <Modal isOpen={isOpen} onOpenChange={onOpenChange} size={isDesktop ? 'lg' : 'full'} hideCloseButton>
@@ -52,20 +58,22 @@ const CitiesModal = ({ isOpen, onOpenChange }) => {
                 />
               </div>
 
-              <ul className="flex h-[calc(100dvh_-_140px)] w-full flex-col items-start justify-start gap-2 overflow-y-auto pe-2 lg:max-h-[280px]">
-                {cities.map((item) => (
-                  <li key={item.id} className="w-full">
-                    <Button
-                      color="secondary"
-                      variant="light"
-                      className="w-full justify-start"
-                      onPress={() => setCity(item.value)}
-                    >
-                      {item.title}
-                    </Button>
-                  </li>
+              <List
+                onAction={(key) => handleSelectCity(key)}
+                selectionMode="single"
+                hideSelectedIcon
+                className="h-[calc(100dvh_-_140px)] overflow-y-auto lg:max-h-[280px]"
+              >
+                {cityList.map((cityItem) => (
+                  <ListItem
+                    key={cityItem.value}
+                    color={city === cityItem.value ? 'primary' : 'secondary'}
+                    variant={city === cityItem.value ? 'solid' : 'flat'}
+                  >
+                    {cityItem.label}
+                  </ListItem>
                 ))}
-              </ul>
+              </List>
             </ModalBody>
           </>
         )}

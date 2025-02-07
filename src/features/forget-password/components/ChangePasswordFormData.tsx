@@ -9,7 +9,7 @@ import { PasswordInput } from '@/components/PasswordInput';
 
 const ChangePasswordFormData = ({ resetStep }) => {
   return (
-    <>
+    <div className="flex w-full flex-col items-start justify-start gap-4">
       <PasswordInput
         name="password"
         label="رمز عبور"
@@ -40,7 +40,7 @@ const ChangePasswordFormData = ({ resetStep }) => {
       >
         ثبت رمز
       </Button>
-    </>
+    </div>
   );
 };
 
