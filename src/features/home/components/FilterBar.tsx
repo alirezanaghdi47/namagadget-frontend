@@ -5,11 +5,11 @@ import { useDisclosure } from '@nextui-org/react';
 import { LuFilter } from 'react-icons/lu';
 
 // components
-import { Button } from '@/components/Button';
+import { Button } from '@shared/components/Button';
 import { Chip } from '@nextui-org/react';
 
 // features
-import FilterModal from '@/features/home/components/FilterModal';
+import FilterModal from '@features/home/components/FilterModal';
 
 const FilterBar = () => {
   const {

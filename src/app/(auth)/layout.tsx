@@ -2,7 +2,7 @@
 import { ReactNode } from 'react';
 
 // layouts
-import Header from '@/layouts/auth/Header';
+import Header from '@shared/layouts/auth/Header';
 
 const AuthLayout = ({ children }: { children: ReactNode }) => {
   return (

@@ -6,8 +6,8 @@ import { useCountdown } from 'usehooks-ts';
 import { LuArrowLeft, LuArrowRight, LuRefreshCcw } from 'react-icons/lu';
 
 // components
-import { Button } from '@/components/Button';
-import { NumberInput } from '@/components/NumberInput';
+import { Button } from '@shared/components/Button';
+import { NumberInput } from '@shared/components/NumberInput';
 
 const VerifyUserFormData = ({ goToNextStep, goToPrevStep }) => {
   const [count, { startCountdown, resetCountdown }] = useCountdown({

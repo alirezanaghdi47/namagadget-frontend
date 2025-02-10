@@ -1,8 +1,8 @@
 'use client';
 
 // features
-import Heading from '@/features/create-my-advertise/components/Heading';
-import Content from '@/features/create-my-advertise/components/Content';
+import Heading from '@features/create-my-advertise/components/Heading';
+import Content from '@features/create-my-advertise/components/Content';
 
 const CreateMyAdvertisePage = () => {
   return (

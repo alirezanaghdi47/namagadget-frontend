@@ -1,8 +1,8 @@
 'use client';
 
 // features
-import FilterBar from '@/features/favorites/components/FilterBar';
-import AdvertiseList from '@/features/favorites/components/AdvertiseList';
+import FilterBar from '@features/favorites/components/FilterBar';
+import AdvertiseList from '@features/favorites/components/AdvertiseList';
 
 const FavoritesPage = () => {
   return (

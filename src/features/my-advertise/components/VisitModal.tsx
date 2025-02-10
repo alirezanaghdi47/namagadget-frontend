@@ -6,8 +6,8 @@ import { useMediaQuery } from 'usehooks-ts';
 import { LuX } from 'react-icons/lu';
 
 // components
-import { Modal, ModalContent, ModalHeader, ModalBody } from '@/components/Modal';
-import { Button } from '@/components/Button';
+import { Modal, ModalContent, ModalHeader, ModalBody } from '@shared/components/Modal';
+import { Button } from '@shared/components/Button';
 
 const Chart = () => {
   const data = [
@@ -57,7 +57,7 @@ const Chart = () => {
 
   return (
     <div className="dir-ltr flex justify-center items-center h-full w-full">
-      <ResponsiveContainer width="100%" height="100%" className="max-h-64">
+      <ResponsiveContainer width="100%" height="100%" className="max-h-64 min-h-64">
         <LineChart
           width={500}
           height={300}

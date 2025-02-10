@@ -1,10 +1,14 @@
 'use client';
 
+// libraries
+import dynamic from "next/dynamic";
+
 // components
-import ImageSlider from '@/features/my-advertise/components/ImageSlider';
-import Detail from '@/features/my-advertise/components/Detail';
-import Location from '@/features/my-advertise/components/Location';
-import StatusBar from '@/features/my-advertise/components/StatusBar';
+import StatusBar from '@features/my-advertise/components/StatusBar';
+import Gallery from '@shared/layouts/advertises/Gallery';
+import Detail from '@shared/layouts/advertises/Detail';
+
+const Location = dynamic(() => import("@shared/layouts/advertises/Location") , {ssr: false});
 
 const Content = () => {
   return (
@@ -14,7 +18,7 @@ const Content = () => {
       </div>
 
       <div className="order-2 col-span-12 col-start-1 row-start-2 lg:order-2 lg:col-span-7 lg:col-start-8 lg:row-span-6 lg:row-start-2">
-        <ImageSlider />
+          <Gallery />
       </div>
 
       <div className="order-4 col-span-12 col-start-1 row-start-4 lg:order-3 lg:col-span-7 lg:col-start-8 lg:row-span-6 lg:row-start-8">

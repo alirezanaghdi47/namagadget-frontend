@@ -4,13 +4,13 @@
 import {LuArrowUpDown} from 'react-icons/lu';
 
 // components
-import { Button } from '@/components/Button';
-import { Chip } from '@/components/Chip';
-import {Popover, PopoverContent, PopoverTrigger} from "@/components/Popover";
-import {Radio, RadioGroup} from "@/components/Radio";
+import { Button } from '@shared/components/Button';
+import { Chip } from '@shared/components/Chip';
+import {Popover, PopoverContent, PopoverTrigger} from "@shared/components/Popover";
+import {Radio, RadioGroup} from "@shared/components/Radio";
 
 // hooks
-import useSort from "@/features/my-advertises/hooks/useSort";
+import useSort from "@features/my-advertises/hooks/useSort";
 
 const ActionBar = () => {
     const { sort, changeSort } = useSort();

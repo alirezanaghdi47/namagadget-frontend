@@ -5,11 +5,11 @@ import { useState } from 'react';
 import { LuInfo, LuShield } from 'react-icons/lu';
 
 // components
-import { Tab, Tabs } from '@/components/Tabs';
+import { Tab, Tabs } from '@shared/components/Tabs';
 
 // features
-import InformationFormData from '@/features/profile/components/InformationFormData';
-import SecurityFormData from '@/features/profile/components/SecurityFormData';
+import InformationFormData from '@features/profile/components/InformationFormData';
+import SecurityFormData from '@features/profile/components/SecurityFormData';
 
 const Content = () => {
   const [page, setPage] = useState('information');

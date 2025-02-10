@@ -1,7 +1,7 @@
 'use client';
 
 // features
-import RegisterFormData from '@/features/register/components/RegisterFormData';
+import RegisterFormData from '@features/register/components/RegisterFormData';
 
 const RegisterPage = () => {
   return (

@@ -5,17 +5,17 @@ import { useMediaQuery } from 'usehooks-ts';
 import { LuCar, LuChevronDown, LuChevronUp, LuFilter, LuHouse, LuMonitor, LuSofa, LuTrash2, LuX } from 'react-icons/lu';
 
 // components
-import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter } from '@/components/Modal';
-import { Button } from '@/components/Button';
-import { Accordion, AccordionItem } from '@/components/Accordion';
-import { SliderInput } from '@/components/SliderInput';
-import { SwitchBox } from '@/components/SwitchBox';
+import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter } from '@shared/components/Modal';
+import { Button } from '@shared/components/Button';
+import { Accordion, AccordionItem } from '@shared/components/Accordion';
+import { SliderInput } from '@shared/components/SliderInput';
+import { SwitchBox } from '@shared/components/SwitchBox';
 
 // features
-import useFilter from '@/features/home/hooks/useFilter';
+import useFilter from '@features/home/hooks/useFilter';
 
 // libs
-import { formattedPrice } from '@/lib/price';
+import { formattedPrice } from '@shared/lib/price';
 
 const FilterModal = ({ isOpen, onOpenChange }) => {
   const categories = [
@@ -40,6 +40,9 @@ const FilterModal = ({ isOpen, onOpenChange }) => {
       size={isDesktop ? 'lg' : 'full'}
       hideCloseButton
       scrollBehavior="inside"
+      classNames={{
+        body: 'custom-scrollbar'
+      }}
     >
       <ModalContent>
         {(onClose) => (

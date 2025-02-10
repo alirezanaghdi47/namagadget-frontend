@@ -1,7 +1,7 @@
 'use client';
 
 // components
-import { Chip } from '@/components/Chip';
+import { Chip } from '@shared/components/Chip';
 
 const FilterBar = () => {
   return (

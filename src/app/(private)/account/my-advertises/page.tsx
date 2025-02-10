@@ -1,8 +1,8 @@
 'use client';
 
 // features
-import ActionBar from '@/features/my-advertises/components/ActionBar';
-import AdvertiseList from '@/features/my-advertises/components/AdvertiseList';
+import ActionBar from '@features/my-advertises/components/ActionBar';
+import AdvertiseList from '@features/my-advertises/components/AdvertiseList';
 
 const MyAdvertisesPage = () => {
   return (

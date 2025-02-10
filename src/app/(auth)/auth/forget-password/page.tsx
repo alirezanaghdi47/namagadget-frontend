@@ -4,9 +4,9 @@
 import { useStep } from 'usehooks-ts';
 
 // features
-import ForgetPasswordFormData from '@/features/forget-password/components/ForgetPasswordFormData';
-import VerifyUserFormData from '@/features/forget-password/components/VerifyUserFormData';
-import ChangePasswordFormData from '@/features/forget-password/components/ChangePasswordFormData';
+import ForgetPasswordFormData from '@features/forget-password/components/ForgetPasswordFormData';
+import VerifyUserFormData from '@features/forget-password/components/VerifyUserFormData';
+import ChangePasswordFormData from '@features/forget-password/components/ChangePasswordFormData';
 
 const ForgetPasswordPage = () => {
   const [currentStep, { goToNextStep, goToPrevStep, reset: resetStep }] = useStep(3);

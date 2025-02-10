@@ -5,8 +5,8 @@ import Link from 'next/link';
 import { LuArrowLeft, LuX } from 'react-icons/lu';
 
 // components
-import { TextInput } from '@/components/TextInput';
-import { Button } from '@/components/Button';
+import { TextInput } from '@shared/components/TextInput';
+import { Button } from '@shared/components/Button';
 
 const ForgetPasswordFormData = ({ goToNextStep }) => {
   return (

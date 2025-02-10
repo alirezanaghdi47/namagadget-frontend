@@ -1,12 +1,12 @@
 'use client';
 
 // features
-import UpdateFormData from '@/features/update-my-advertise/components/UpdateFormData';
+import FormData from '@shared/layouts/advertises/FormData';
 
 const Content = () => {
   return (
     <div className="flex w-full flex-col items-start justify-start gap-2">
-      <UpdateFormData />
+      <FormData />
     </div>
   );
 };

@@ -5,9 +5,9 @@ import Link from 'next/link';
 import { LuLockKeyhole, LuLogIn, LuUserPlus } from 'react-icons/lu';
 
 // components
-import { TextInput } from '@/components/TextInput';
-import { Button } from '@/components/Button';
-import { PasswordInput } from '@/components/PasswordInput';
+import { TextInput } from '@shared/components/TextInput';
+import { Button } from '@shared/components/Button';
+import { PasswordInput } from '@shared/components/PasswordInput';
 
 const LoginFormData = () => {
   return (

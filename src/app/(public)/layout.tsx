@@ -2,9 +2,9 @@
 import { ReactNode } from 'react';
 
 // layouts
-import AppBar from '@/layouts/public/AppBar';
-import Header from '@/layouts/public/Header';
-import BottomNavigation from '@/layouts/public/BottomNavigation';
+import AppBar from '@shared/layouts/public/AppBar';
+import Header from '@shared/layouts/public/Header';
+import BottomNavigation from '@shared/layouts/public/BottomNavigation';
 
 const PublicLayout = ({ children }: { children: ReactNode }) => {
   return (

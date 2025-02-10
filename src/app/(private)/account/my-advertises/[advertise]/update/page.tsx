@@ -1,8 +1,8 @@
 'use client';
 
 // features
-import Heading from '@/features/update-my-advertise/components/Heading';
-import Content from '@/features/update-my-advertise/components/Content';
+import Heading from '@features/update-my-advertise/components/Heading';
+import Content from '@features/update-my-advertise/components/Content';
 
 const UpdateMyAdvertisePage = () => {
   return (

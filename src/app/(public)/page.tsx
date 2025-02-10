@@ -1,6 +1,6 @@
 // features
-import FilterBar from '@/features/home/components/FilterBar';
-import AdvertiseList from '@/features/home/components/AdvertiseList';
+import FilterBar from '@features/home/components/FilterBar';
+import AdvertiseList from '@features/home/components/AdvertiseList';
 
 const HomePage = () => {
   return (

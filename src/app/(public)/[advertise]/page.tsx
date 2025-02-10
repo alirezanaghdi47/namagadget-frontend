@@ -1,6 +1,6 @@
 // features
-import Heading from '@/features/advertise/components/Heading';
-import Content from '@/features/advertise/components/Content';
+import Heading from '@features/advertise/components/Heading';
+import Content from '@features/advertise/components/Content';
 
 const AdvertisePage = () => {
   return (

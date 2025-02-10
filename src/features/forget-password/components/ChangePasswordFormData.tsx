@@ -4,8 +4,8 @@
 import { LuKey } from 'react-icons/lu';
 
 // components
-import { Button } from '@/components/Button';
-import { PasswordInput } from '@/components/PasswordInput';
+import { Button } from '@shared/components/Button';
+import { PasswordInput } from '@shared/components/PasswordInput';
 
 const ChangePasswordFormData = ({ resetStep }) => {
   return (

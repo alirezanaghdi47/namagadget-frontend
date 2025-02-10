@@ -1,17 +1,18 @@
 // libraries
 import { ReactNode } from 'react';
 import type { Metadata } from 'next';
-import { getSession } from '@/lib/auth';
+import { getSession } from '@shared/lib/auth';
 
 // helpers
-import { vazirmatn } from '@/lib/fonts';
+import { vazirmatn } from '@shared/lib/fonts';
 
 // providers
-import AuthProvider from '@/providers/AuthProvider';
-import ThemeProvider from '@/providers/ThemeProvider';
+import AuthProvider from '@shared/providers/AuthProvider';
+import ThemeProvider from '@shared/providers/ThemeProvider';
 
 // styles
-import '@/styles/globals.css';
+import '@shared/styles/globals.css';
+import '@shared/styles/reset.css';
 
 export const metadata: Metadata = {
   title: 'نماگجت',
@@ -23,7 +24,7 @@ const RootLayout = async ({ children }: { children: ReactNode }) => {
 
   return (
     <html lang="fa" dir="rtl" suppressHydrationWarning>
-      <body className={`${vazirmatn.className}`}>
+      <body className={`${vazirmatn.className} custom-scrollbar`}>
         <AuthProvider session={session}>
           <ThemeProvider>{children}</ThemeProvider>
         </AuthProvider>

@@ -4,8 +4,8 @@
 import { LuCheck } from 'react-icons/lu';
 
 // components
-import { PasswordInput } from '@/components/PasswordInput';
-import { Button } from '@/components/Button';
+import { PasswordInput } from '@shared/components/PasswordInput';
+import { Button } from '@shared/components/Button';
 
 const SecurityFormData = () => {
   return (

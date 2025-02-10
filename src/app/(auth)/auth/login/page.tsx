@@ -1,7 +1,7 @@
 'use client';
 
 // features
-import LoginFormData from '@/features/login/components/LoginFormData';
+import LoginFormData from '@features/login/components/LoginFormData';
 
 const LoginPage = () => {
   return (

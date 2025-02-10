@@ -4,10 +4,10 @@
 import { LuCheck } from 'react-icons/lu';
 
 // components
-import { TextInput } from '@/components/TextInput';
-import { Button } from '@/components/Button';
-import { NumberInput } from '@/components/NumberInput';
-import { DatePicker } from '@/components/DatePicker';
+import { TextInput } from '@shared/components/TextInput';
+import { Button } from '@shared/components/Button';
+import { NumberInput } from '@shared/components/NumberInput';
+import { DatePicker } from '@shared/components/DatePicker';
 
 const InformationFormData = () => {
   return (

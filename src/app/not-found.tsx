@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { LuChevronLeft } from 'react-icons/lu';
 
 // components
-import { Button } from '@/components/Button';
+import { Button } from '@shared/components/Button';
 
 const RootNotFound = () => {
   return (

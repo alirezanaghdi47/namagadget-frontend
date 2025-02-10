@@ -1,12 +1,12 @@
 'use client';
 
 // features
-import CreateFormData from '@/features/create-my-advertise/components/CreateFormData';
+import FormData from '@shared/layouts/advertises/FormData';
 
 const Content = () => {
   return (
     <div className="flex w-full flex-col items-start justify-start gap-2">
-      <CreateFormData />
+      <FormData />
     </div>
   );
 };

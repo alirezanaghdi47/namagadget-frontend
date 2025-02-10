@@ -1,7 +1,7 @@
 'use client';
 
 // components
-import { Breadcrumbs, BreadcrumbItem } from '@/components/Breadcrumbs';
+import { Breadcrumbs, BreadcrumbItem } from '@shared/components/Breadcrumbs';
 
 const Heading = () => {
   return (

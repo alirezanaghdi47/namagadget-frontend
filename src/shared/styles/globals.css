@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .dir-ltr {
+    direction: ltr !important;
+  }
+
+  .dir-rtl {
+    direction: rtl !important;
+  }
+
+  .custom-scrollbar{
+    &::-webkit-scrollbar {
+      @apply h-2 w-2;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      @apply rounded-lg bg-secondary/20;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      @apply bg-secondary/40;
+    }
+  }
+
+  .remove-scrollbar {
+    -ms-overflow-style: none!important;
+    scrollbar-width: none!important;
+
+    &::-webkit-scrollbar {
+      display: none!important;
+    }
+  }
+}
+

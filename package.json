@@ -1,6 +1,6 @@
 {
   "name": "namagadget-frontend",
-  "version": "0.10.2",
+  "version": "0.10.5",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -26,8 +26,7 @@
     "recharts": "^2.15.1",
     "swiper": "^11.2.1",
     "tailwind-scrollbar": "^3.1.0",
-    "usehooks-ts": "^3.1.0",
-    "zustand": "^5.0.3"
+    "usehooks-ts": "^3.1.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -39,7 +38,7 @@
     "eslint": "^9.18.0",
     "eslint-config-next": "^15.1.4",
     "eslint-config-prettier": "^10.0.1",
-    "motion": "^11.18.0",
+    "motion": "^11.18.2",
     "postcss": "^8",
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.9",
