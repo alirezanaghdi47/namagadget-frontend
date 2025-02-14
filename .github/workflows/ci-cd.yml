@@ -1,0 +1,54 @@
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "20.9.0"
+
+      - name: Install Dependencies
+        run: npm install --f
+
+      - name: Run lint
+        run: npm run lint
+
+      - name: Run Format
+        run: npm run format
+
+      - name: Build
+        run: npm run build
+
+#  cd:
+#    runs-on: ubuntu-latest
+#    needs: ci
+#
+#    steps:
+#      - uses: actions/checkout@v2
+#        with:
+#          fetch-depth: 0
+#
+#      - name: SSH Deploy
+#        uses: appleboy/ssh-action@master
+#        with:
+#          host: ${{ secrets.HOST }}
+#          username: ${{ secrets.USERNAME }}
+#          key: ${{ secrets.SSH_PRIVATE_KEY }}
+#          script: |
+#            cd /var/www/next
+#            docker system prune
+#            git pull
+#            docker-compose down
+#            docker-compose up -d --build
