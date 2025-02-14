@@ -56,7 +56,7 @@ const Chart = () => {
   ];
 
   return (
-    <div className="dir-ltr flex justify-center items-center h-full w-full">
+    <div className="dir-ltr flex h-full w-full items-center justify-center">
       <ResponsiveContainer width="100%" height="100%" className="max-h-64 min-h-64">
         <LineChart
           width={500}

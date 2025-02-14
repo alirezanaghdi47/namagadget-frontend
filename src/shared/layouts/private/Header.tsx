@@ -22,23 +22,23 @@ const Header = () => {
           </Link>
 
           <Button
-              as={Link}
-              href='/account/my-advertises'
-              color="secondary"
-              size="md"
-              variant="light"
-              startContent={<LuFileText size={16}/>}
+            as={Link}
+            href="/account/my-advertises"
+            color="secondary"
+            size="md"
+            variant="light"
+            startContent={<LuFileText size={16} />}
           >
             آگهی های من
           </Button>
 
           <Button
-              as={Link}
-              href='/account/favorites'
-              color="secondary"
-              size="md"
-              variant="light"
-              startContent={<LuBookmark size={16}/>}
+            as={Link}
+            href="/account/favorites"
+            color="secondary"
+            size="md"
+            variant="light"
+            startContent={<LuBookmark size={16} />}
           >
             نشان شده ها
           </Button>

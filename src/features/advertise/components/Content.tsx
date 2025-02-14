@@ -1,13 +1,13 @@
 'use client';
 
 // libraries
-import dynamic from "next/dynamic";
+import dynamic from 'next/dynamic';
 
 // components
 import Gallery from '@shared/layouts/advertises/Gallery';
 import Detail from '@shared/layouts/advertises/Detail';
 
-const Location = dynamic(() => import("@shared/layouts/advertises/Location") , {ssr: false});
+const Location = dynamic(() => import('@shared/layouts/advertises/Location'), { ssr: false });
 
 const Content = () => {
   return (

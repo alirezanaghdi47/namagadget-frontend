@@ -1,11 +1,11 @@
 'use client';
 
 // libraries
-import {useRef} from "react";
+import { useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useDisclosure } from '@nextui-org/react';
-import {useMediaQuery} from "usehooks-ts";
+import { useMediaQuery } from 'usehooks-ts';
 import { LuMapPin, LuPlus, LuSearch, LuUser } from 'react-icons/lu';
 
 // components
@@ -13,7 +13,7 @@ import { Button } from '@shared/components/Button';
 import { TextInput } from '@shared/components/TextInput';
 
 // hooks
-import useKeyboardShortcut from "@shared/hooks/useKeyboardShortcut";
+import useKeyboardShortcut from '@shared/hooks/useKeyboardShortcut';
 
 // layouts
 import CitiesModal from '@shared/layouts/public/CitiesModal';
@@ -23,21 +23,21 @@ const SearchBar = () => {
   const searchRef = useRef(null);
   const isDesktop = useMediaQuery('(min-width: 992px)');
 
-  useKeyboardShortcut(["alt", "s"] , () => searchRef?.current.focus());
+  useKeyboardShortcut(['alt', 's'], () => searchRef?.current.focus());
 
-  return(
-      <TextInput
-          ref={searchRef}
-          name="search"
-          type="text"
-          variant="flat"
-          size="md"
-          startContent={<LuSearch size={isDesktop ? 16 : 20} />}
-          placeholder="جستجو کنید"
-          className="ms-4 max-w-64"
-      />
-  )
-}
+  return (
+    <TextInput
+      ref={searchRef}
+      name="search"
+      type="text"
+      variant="flat"
+      size="md"
+      startContent={<LuSearch size={isDesktop ? 16 : 20} />}
+      placeholder="جستجو کنید"
+      className="ms-4 max-w-64"
+    />
+  );
+};
 
 const Header = () => {
   const { isOpen: isOpenCityModal, onOpen: onOpenCityModal, onOpenChange: onOpenChangeCityModal } = useDisclosure();
@@ -63,7 +63,7 @@ const Header = () => {
 
           {isOpenCityModal && <CitiesModal isOpen={isOpenCityModal} onOpenChange={onOpenChangeCityModal} />}
 
-          <SearchBar/>
+          <SearchBar />
         </div>
 
         <div className="col-span-3 flex items-center justify-end gap-2">

@@ -41,7 +41,7 @@ const FilterModal = ({ isOpen, onOpenChange }) => {
       hideCloseButton
       scrollBehavior="inside"
       classNames={{
-        body: 'custom-scrollbar'
+        body: 'custom-scrollbar',
       }}
     >
       <ModalContent>

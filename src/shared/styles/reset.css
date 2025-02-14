@@ -1,14 +1,13 @@
 * {
-    user-select: none!important;
+  user-select: none !important;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none!important;
-    margin: 0!important;
+  -webkit-appearance: none !important;
+  margin: 0 !important;
 }
 
 input[type='number'] {
-    -moz-appearance: textfield!important;
+  -moz-appearance: textfield !important;
 }
-

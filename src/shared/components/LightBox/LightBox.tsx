@@ -8,15 +8,15 @@ import { Button } from '@shared/components/Button';
 import { Carousel, CarouselItem, Navigation, Pagination } from '@shared/components/Carousel';
 
 // hooks
-import useKeyboardShortcut from "@shared/hooks/useKeyboardShortcut";
+import useKeyboardShortcut from '@shared/hooks/useKeyboardShortcut';
 
 const LightBox = ({ isOpen, onClose }) => {
   const sliderRef = useRef(null);
   const nextSlideRef = useRef(null);
   const prevSlideRef = useRef(null);
 
-  useKeyboardShortcut(["alt", "n"] , () => handleNextSlide());
-  useKeyboardShortcut(["alt", "p"] , () => handlePrevSlide());
+  useKeyboardShortcut(['alt', 'n'], () => handleNextSlide());
+  useKeyboardShortcut(['alt', 'p'], () => handlePrevSlide());
 
   const handleNextSlide = () => {
     sliderRef?.current?.slideNext();
@@ -40,9 +40,9 @@ const LightBox = ({ isOpen, onClose }) => {
         <LuX size={20} />
       </Button>
 
-      <div className="relative h-full lg:max-h-[calc(100%_-_100px)] w-full lg:max-w-[calc(100%_-_100px)]">
+      <div className="relative h-full w-full lg:max-h-[calc(100%_-_100px)] lg:max-w-[calc(100%_-_100px)]">
         <Button
-            ref={nextSlideRef}
+          ref={nextSlideRef}
           color="default"
           variant="solid"
           isIconOnly
@@ -53,7 +53,7 @@ const LightBox = ({ isOpen, onClose }) => {
         </Button>
 
         <Button
-            ref={prevSlideRef}
+          ref={prevSlideRef}
           color="default"
           variant="solid"
           isIconOnly
@@ -64,7 +64,7 @@ const LightBox = ({ isOpen, onClose }) => {
         </Button>
 
         <Carousel
-          onSwiper={(swiper: any) => (sliderRef.current = swiper)}
+          onSwiper={(swiper) => (sliderRef.current = swiper)}
           modules={[Navigation, Pagination]}
           spaceBetween={50}
           slidesPerView={1}

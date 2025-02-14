@@ -10,11 +10,11 @@ const PrivateLayout = ({ children }: { children: ReactNode }) => {
     <div className="flex h-full w-full flex-col items-start justify-start">
       <Header />
 
-        <div className="mx-auto flex h-full min-h-dvh w-full max-w-6xl flex-col items-start justify-start pb-[80px] lg:pt-[80px] lg:pb-0">
-            {children}
-        </div>
+      <div className="mx-auto flex h-full min-h-dvh w-full max-w-6xl flex-col items-start justify-start pb-[80px] lg:pb-0 lg:pt-[80px]">
+        {children}
+      </div>
 
-        <BottomNavigation/>
+      <BottomNavigation />
     </div>
   );
 };

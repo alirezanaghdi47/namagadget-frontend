@@ -3,7 +3,7 @@
 // libraries
 import { useRef } from 'react';
 import Image from 'next/image';
-import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic';
 import { useDisclosure } from '@nextui-org/react';
 import { LuChevronLeft, LuChevronRight } from 'react-icons/lu';
 
@@ -12,9 +12,9 @@ import { Carousel, CarouselItem, Navigation, Pagination } from '@shared/componen
 import { Button } from '@shared/components/Button';
 
 // hooks
-import useKeyboardShortcut from "@shared/hooks/useKeyboardShortcut";
+import useKeyboardShortcut from '@shared/hooks/useKeyboardShortcut';
 
-const LightBox = dynamic(() => import("@shared/components/LightBox").then(module => module.LightBox) , {ssr: false});
+const LightBox = dynamic(() => import('@shared/components/LightBox').then((module) => module.LightBox), { ssr: false });
 
 const ImageSlider = () => {
   const sliderRef = useRef(null);
@@ -22,8 +22,8 @@ const ImageSlider = () => {
   const prevSlideRef = useRef(null);
   const { isOpen: isOpenLightBox, onOpen: onOpenLightBox, onClose: onCloseLightBox } = useDisclosure();
 
-  useKeyboardShortcut(["alt", "n"] , () => handleNextSlide());
-  useKeyboardShortcut(["alt", "p"] , () => handlePrevSlide());
+  useKeyboardShortcut(['alt', 'n'], () => handleNextSlide());
+  useKeyboardShortcut(['alt', 'p'], () => handlePrevSlide());
 
   const handleNextSlide = () => {
     sliderRef?.current?.slideNext();
@@ -45,8 +45,8 @@ const ImageSlider = () => {
     <>
       <div className="relative w-full">
         <Button
-            ref={nextSlideRef}
-            color="default"
+          ref={nextSlideRef}
+          color="default"
           variant="solid"
           isIconOnly
           onPress={handleNextSlide}
@@ -56,7 +56,7 @@ const ImageSlider = () => {
         </Button>
 
         <Button
-            ref={prevSlideRef}
+          ref={prevSlideRef}
           color="default"
           variant="solid"
           isIconOnly
@@ -67,7 +67,7 @@ const ImageSlider = () => {
         </Button>
 
         <Carousel
-          onSwiper={(swiper: any) => (sliderRef.current = swiper)}
+          onSwiper={(swiper) => (sliderRef.current = swiper)}
           modules={[Navigation, Pagination]}
           spaceBetween={16}
           slidesPerView={1}

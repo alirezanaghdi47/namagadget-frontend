@@ -30,23 +30,23 @@ const AdvertiseCard = ({ advertise, status, actions }) => {
 
   return (
     <div className="flex h-full w-full items-center justify-start">
-      <div
-        className="flex h-32 w-full items-start justify-start gap-2 border border-solid border-secondary/10 bg-default rounded-lg p-2"
-      >
+      <div className="flex h-32 w-full items-start justify-start gap-2 rounded-lg border border-solid border-secondary/10 bg-default p-2">
         <Link href="/account/my-advertises/advertise" className="flex h-full w-full items-center justify-start gap-2">
-          <div className="relative min-w-32 h-32 py-2">
+          <div className="relative h-32 min-w-32 py-2">
             <Image
-                src="/assets/images/adv-card.webp"
-                alt="image"
-                width={120}
-                height={120}
-                className="w-full h-full rounded-lg object-cover object-center"
+              src="/assets/images/adv-card.webp"
+              alt="image"
+              width={120}
+              height={120}
+              className="h-full w-full rounded-lg object-cover object-center"
             />
 
             {status && (
-                <div className={`absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center justify-center p-2 bg-${status.type} w-full rounded-b-lg`}>
-                  <span className={`text-nowrap text-xxs font-bold text-${status.type}-foreground`}>منتشر شده</span>
-                </div>
+              <div
+                className={`absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center justify-center p-2 bg-${status.type} w-full rounded-b-lg`}
+              >
+                <span className={`text-nowrap text-xxs font-bold text-${status.type}-foreground`}>منتشر شده</span>
+              </div>
             )}
           </div>
 
@@ -55,7 +55,7 @@ const AdvertiseCard = ({ advertise, status, actions }) => {
               ۷۶متر ۲خوابه بازسازی شده خوش نور و نقشه فردوس
             </h2>
 
-            <span className="mt-auto line-clamp-1 text-xs font-light text-secondary mb-2">
+            <span className="mb-2 mt-auto line-clamp-1 text-xs font-light text-secondary">
               7,550,000,000
               <span className="ms-1 text-xs">تومان</span>
             </span>

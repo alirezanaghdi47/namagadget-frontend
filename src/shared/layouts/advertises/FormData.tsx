@@ -15,7 +15,7 @@ import { ImageInput } from '@shared/components/ImageInput';
 import { NumberInput } from '@shared/components/NumberInput';
 
 const Properties = () => {
-    const [properties, setProperties] = useState([]);
+  const [properties, setProperties] = useState([]);
 
   return (
     <div className="mt-4 flex w-full flex-col items-start justify-start gap-4">
@@ -85,13 +85,7 @@ const Properties = () => {
         </ul>
       ) : (
         <div className="flex w-full flex-col items-center justify-center gap-4">
-          <Image
-            src="/assets/images/no-data.svg"
-            alt="ویژگی یافت نشد"
-            width={80}
-            height={80}
-            className="h-full w-24"
-          />
+          <Image src="/assets/images/no-data.svg" alt="ویژگی یافت نشد" width={80} height={80} className="h-full w-24" />
 
           <span className="text-sm font-bold text-secondary">ویژگی ثبت نشده</span>
         </div>

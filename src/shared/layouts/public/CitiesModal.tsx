@@ -62,7 +62,7 @@ const CitiesModal = ({ isOpen, onOpenChange }) => {
                 onAction={(key) => handleSelectCity(key)}
                 selectionMode="single"
                 hideSelectedIcon
-                className="h-[calc(100dvh_-_140px)] overflow-y-auto lg:max-h-[280px] custom-scrollbar"
+                className="custom-scrollbar h-[calc(100dvh_-_140px)] overflow-y-auto lg:max-h-[280px]"
               >
                 {cityList.map((cityItem) => (
                   <ListItem

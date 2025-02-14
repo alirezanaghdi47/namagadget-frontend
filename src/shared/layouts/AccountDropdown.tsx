@@ -3,7 +3,7 @@
 // libraries
 import { useTheme } from 'next-themes';
 import { User } from '@nextui-org/react';
-import {LuLogOut, LuMoon, LuSun, LuFileText, LuBookmark} from 'react-icons/lu';
+import { LuLogOut, LuMoon, LuSun, LuFileText, LuBookmark } from 'react-icons/lu';
 
 // libraries
 import { Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from '@shared/components/Dropdown';
@@ -31,19 +31,19 @@ const AccountDropdown = ({ trigger }) => {
         </DropdownItem>
 
         <DropdownItem
-            variant="flat"
-            color="secondary"
-            href='/account/favorites'
-            startContent={<LuBookmark size={16}/>}
+          variant="flat"
+          color="secondary"
+          href="/account/favorites"
+          startContent={<LuBookmark size={16} />}
         >
           نشان شده ها
         </DropdownItem>
 
         <DropdownItem
-            variant="flat"
-            color="secondary"
-            href='/account/my-advertises'
-            startContent={<LuFileText size={16}/>}
+          variant="flat"
+          color="secondary"
+          href="/account/my-advertises"
+          startContent={<LuFileText size={16} />}
         >
           آگهی های من
         </DropdownItem>

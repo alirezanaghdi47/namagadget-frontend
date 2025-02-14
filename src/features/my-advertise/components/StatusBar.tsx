@@ -1,7 +1,7 @@
 'use client';
 
 // libraries
-import dynamic from "next/dynamic";
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { useDisclosure } from '@nextui-org/react';
 import { LuChartLine, LuEye, LuPencil, LuTrash2, LuX } from 'react-icons/lu';
@@ -12,7 +12,7 @@ import { Chip } from '@shared/components/Chip';
 import { Popover, PopoverContent, PopoverTrigger } from '@shared/components/Popover';
 
 // features
-const VisitModal = dynamic(() => import('@features/my-advertise/components/VisitModal') , {ssr: false});
+const VisitModal = dynamic(() => import('@features/my-advertise/components/VisitModal'), { ssr: false });
 
 const StatusBar = () => {
   const { isOpen: isOpenVisitModal, onOpen: onOpenVisitModal, onOpenChange: onOpenChangeVisitModal } = useDisclosure();
@@ -28,7 +28,7 @@ const StatusBar = () => {
 
       <li className="">
         <Button color="secondary" size="md" variant="light" isIconOnly onPress={onOpenVisitModal}>
-            <LuChartLine size={20} />
+          <LuChartLine size={20} />
         </Button>
 
         {isOpenVisitModal && <VisitModal isOpen={isOpenVisitModal} onOpenChange={onOpenChangeVisitModal} />}
@@ -38,7 +38,7 @@ const StatusBar = () => {
         <Popover backdrop="blur" placement="bottom" offset={8}>
           <PopoverTrigger>
             <Button color="secondary" size="md" variant="light" isIconOnly>
-                <LuEye size={20} />
+              <LuEye size={20} />
             </Button>
           </PopoverTrigger>
           <PopoverContent>
@@ -68,7 +68,7 @@ const StatusBar = () => {
           variant="light"
           isIconOnly
         >
-            <LuPencil size={20} />
+          <LuPencil size={20} />
         </Button>
       </li>
 
@@ -76,7 +76,7 @@ const StatusBar = () => {
         <Popover backdrop="blur" placement="bottom" offset={8}>
           <PopoverTrigger>
             <Button color="danger" size="md" variant="light" isIconOnly>
-                <LuTrash2 size={20} />
+              <LuTrash2 size={20} />
             </Button>
           </PopoverTrigger>
           <PopoverContent>

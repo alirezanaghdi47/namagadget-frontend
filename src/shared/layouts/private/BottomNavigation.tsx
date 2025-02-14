@@ -3,7 +3,7 @@
 // libraries
 import Image from 'next/image';
 import Link from 'next/link';
-import {LuBookmark, LuFileText, LuPlus, LuUser} from 'react-icons/lu';
+import { LuBookmark, LuFileText, LuPlus, LuUser } from 'react-icons/lu';
 
 // components
 import { Button } from '@shared/components/Button';
@@ -31,13 +31,13 @@ const BottomNavigation = () => {
 
         <div className="col-span-3 flex items-center justify-center">
           <Button
-              as={Link}
-              size="sm"
-              color="secondary"
-              variant="light"
-              href="/account/my-advertises"
-              startContent={<LuFileText size={20}/>}
-              className="h-max flex-col p-2"
+            as={Link}
+            size="sm"
+            color="secondary"
+            variant="light"
+            href="/account/my-advertises"
+            startContent={<LuFileText size={20} />}
+            className="h-max flex-col p-2"
           >
             آگهی های من
           </Button>
@@ -45,13 +45,13 @@ const BottomNavigation = () => {
 
         <div className="absolute bottom-14 left-1/2 right-1/2 z-10 flex items-center justify-center">
           <Button as={Link} size="lg" color="primary" variant="solid" href="/account/my-advertises/create" isIconOnly>
-            <LuPlus size={20}/>
+            <LuPlus size={20} />
           </Button>
         </div>
 
         <div className="col-span-3 flex items-center justify-center">
           <Button
-              as={Link}
+            as={Link}
             size="sm"
             color="secondary"
             variant="light"
